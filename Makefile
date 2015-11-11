@@ -1,9 +1,9 @@
 
-all: qap.tex qap.bib Makefile
-	pdflatex qap.tex
-	bibtex qap
-	pdflatex qap.tex
-	pdflatex qap.tex
+all: qap_fn.tex qap.bib Makefile
+	pdflatex qap_fn.tex
+	bibtex qap_fn
+	pdflatex qap_fn.tex
+	pdflatex qap_fn.tex
 
 clean:
-	rm -f *.aux *.bbl *.log *.dvi
+	rm -f *.aux *.bbl *.log *.dvi *.blg *.out
