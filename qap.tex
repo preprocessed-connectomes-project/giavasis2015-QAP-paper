@@ -57,7 +57,7 @@ grestore
 % \newcommand{}{}
 %
 % Insert the name of "your journal" with
-% \journalname{myjournal}
+\journalname{Neuroinformatics}
 %
 \begin{document}
 
@@ -85,15 +85,12 @@ grestore
 
 \institute{S. Giavasis \at
               Center for the Developing Brain, Child Mind Institute, 445 Park Ave., New York, NY 10022 \\
-              \email{steven.giavasis@childmind.org}           %  \\
-%             \emph{Present address:} of F. Author  %  if needed
-           \and
+              \email{steven.giavasis@childmind.org}
+		   \and
            R. C. Craddock\at
-              Computational Neuroimaging Laboratory, Center for Biomedical Imaging and Neuromodulation, Nathan S. Kline Institute for Psychiatric Research, 140 Old Orangeburg Rd. \\
+              Computational Neuroimaging Laboratory, Center for Biomedical Imaging and Neuromodulation, Nathan S. Kline Institute for Psychiatric Research, 140 Old Orangeburg Rd., Orangeburg, NY 10022 \\
               Center for the Developing Brain, Child Mind Institute, 445 Park Ave., New York, NY 10022 \\
               \email{cameron.craddock@nki.rfmh.org} \\
-              
-              Orangeburg, NY 10022 
            \and
            S. Author \at
               second address
@@ -172,10 +169,10 @@ The AFNI tool 3dTqual is used to calculate a quality index describing the functi
 \subsubsection{Mean Framewise Displacement (Jenkinson’s Mean FD)}
 \label{sec:16}
 A measure of subject head motion, which compares the motion between the current and previous volumes. This is calculated by summing the absolute value of displacement changes in the x, y and z directions and rotational changes about those three axes. The rotational changes are given distance values based on the changes across the surface of a 80mm radius sphere. The lower this number is, the better.
-\subsubsection{Number of volumes with FD greater than 0.2mm (Num_FD)}
+\subsubsection{Number of volumes with FD greater than 0.2mm (Num\_FD)}
 \label{sec:17}
 This is the number of volumes in the timeseries whose Jenkinson’s Mean FD exceeds 0.2. The lower this number is, the better.
-\subsubsection{Percent of volumes with FD greater than 0.2mm (Perc_FD)}
+\subsubsection{Percent of volumes with FD greater than 0.2mm (Perc\_FD)}
 \label{sec:18}
 This is the percent of total volumes in a timeseries whose Jenkinson’s Mean FD exceeds 0.2. The lower this number is, the better.
 \subsection{The QAP Pipeline Python Toolbox}
@@ -209,6 +206,9 @@ Figure 4. boxplots of most discriminative measures vs. hand assessments
 Figure 5. regression plots of most significant relationships with scanning parameters
 \\\\
 Each of the measures showed a good bit of variability between imaging sites (see Figure 1 for an example plot showing standardized DVARS for ABIDE). Ranks calculated from the weighted average of standardized quality metrics indicated that CMU was the worst performing site and NYU was the best. QI1 and SNR were the best predictors of manually applied structural data quality scores, and EFC, FWHM, Percent FD, and GSR were all significant predictors of functional data quality (fig 2, p<0.0001). A few of the measures are highly correlated (fig. 3) such as SNR, CNR and FBER, which measure very similar constructs, indicated that there is some room for reducing the set of measures. For the functional data, the test­-retest reliability of several of the spatial measures of quality were very high (fig 4., EFC, FBER, GSR) reflecting their sensitivity to technical quality (i.e. MR system and parameters) whereas temporal measures were lower reflecting their sensitivity to physiological factors such as head motion. Similarly in the structural data, it appears that measures can be divided into those that are more sensitive to technical quality (EFC, FWHM) and those that favor physiological variation (CNR, QI1) based on test­-retest reliability.
+
+\nocite{*}
+
 \section{Discussion}
 \label{sec:26}
 \section{Conclusion}
@@ -222,7 +222,9 @@ and remove the percent signs.
 \bibliographystyle{spbasic}      % basic style, author-year citations
 %\bibliographystyle{spmpsci}      % mathematics and physical sciences
 %\bibliographystyle{spphys}       % APS-like style for physics
-\bibliography{qap.bib}   % name your BibTeX data base
+\bibliography{qap}   % name your BibTeX data base
+
+
 
 % Non-BibTeX users please use
 %\begin{thebibliography}{}
