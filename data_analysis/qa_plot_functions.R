@@ -183,13 +183,13 @@ plot_measure <- function(df, measure, desc, site.col="site.name", plot=TRUE,
       theme(panel.grid.minor.x= element_blank()) + 
       theme(panel.grid.major.y= element_blank()) + 
       theme(panel.grid.minor.y= element_blank()) + 
-      theme(axis.title.x      = element_text(family = "Times", face = "plain", 
+      theme(axis.title.x      = element_text(family = "ArialMT", face = "plain", 
                                   size=18)) +  
-      theme(axis.title.y      = element_text(family = "Times", face = "plain", 
+      theme(axis.title.y      = element_text(family = "ArialMT", face = "plain", 
                                   size=18, angle=90, vjust=0.75)) +  
-      theme(axis.text.x       = element_text(family = "Times", face = "plain", 
+      theme(axis.text.x       = element_text(family = "ArialMT", face = "plain", 
                                   size=14, vjust=0.95, hjust=1, angle=45)) + 
-      theme(axis.text.y       = element_text(family = "Times", face = "plain", 
+      theme(axis.text.y       = element_text(family = "ArialMT", face = "plain", 
                                   size=16, angle=0, hjust=0.5)) + 
       theme(axis.ticks.length = unit(.15, "lines")) + 
       theme(axis.ticks.margin = unit(.15,"lines")) + 

@@ -36,7 +36,7 @@ We notice that anatomical measures more correlated each other than functional me
     DVARS & 0.012 & 0.015 & -0.108 & -0.016 & & -0.020 & -0.116 & 0.197 \\
     Mean FD & -0.029 & 0.129 & 0.143 & 0.139 & -0.140 & & 0.162 & -0.014 \\
     Quality & -0.693* & 0.234 & 0.106 & 0.531 & -0.153 & 0.310* & & -0.042 \\
-    GCOR & -0.098 & 0.066 & 0.035 & 0.092 & 0.207 & 0.060 & 0.046 & \\ 
+    GCOR & -0.098 & 0.066 & 0.035 & 0.092 & 0.207 & 0.060 & 0.046 & \\
     \hline
     \end{tabular}
   \end{center}
@@ -122,7 +122,7 @@ Table 2 summarizes the results. Figure 4 shows boxplots of most discriminative m
 \begin{table}
   \textbf{\refstepcounter{table}\label{func_spat_reg} Table \arabic{table}.}{ Functional spatial - Regression analysis for the relationship of measures with scanning parameters. Estimated coefficients of each parameter are reported by measures. * indicates p-value less than 0.05.  }
   \begin{center}
-  
+
     \begin{tabular}{ l l r r r r }
     \hline
     Parameter / measure & & EFC & FBER & FWHM & SNR \\ \hline
@@ -153,7 +153,7 @@ Table 2 summarizes the results. Figure 4 shows boxplots of most discriminative m
 \begin{table}
   \textbf{\refstepcounter{table}\label{func_temp_reg} Table \arabic{table}.}{Functional temporal - Regression analysis for the relationship of measures with scanning parameters. Estimated coefficients of each parameter are reported by measures. * indicates p-value less than 0.05.}
   \begin{center}
-  
+
     \begin{tabular}{ l l r r r r r r }
     \hline
     Parameter / measure & & DVARS & Quality & Mean RMSD & Perc FD & Num FD & GCOR \\ \hline
@@ -180,42 +180,17 @@ Table 2 summarizes the results. Figure 4 shows boxplots of most discriminative m
     \end{tabular}
   \end{center}
 \end{table}
-
 \begin{figure}[!ht]
-  \centering
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_ABIDE_Anatomical_cnr}
-       \caption{CNR Anatomical Measure for ABIDE}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_ABIDE_Anatomical_efc}
-       \caption{EFC Anatomical Measure for ABIDE}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_ABIDE_Anatomical_fber}
-       \caption{FBER Anatomical Measure for ABIDE}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_ABIDE_Anatomical_fwhm}
-       \caption{FWHM Anatomical Measure for ABIDE}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_ABIDE_Anatomical_qi1}
-       \caption{Qi1 Anatomical Measure for ABIDE}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_ABIDE_Anatomical_snr}
-       \caption{SNR Anatomical Measure for ABIDE}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_ABIDE_Functional_zgcor}
-       \caption{GCOR Functional Measure for ABIDE}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.9\textwidth}
-       \includegraphics[width=0.9\textwidth]{fig1_CORR_Functional_gcor}
-       \caption{GCOR Functional Measure for CoRR}
-     \end{subfigure} 
-     \caption{Examples of measures and distributions for ABIDE and CoRR}
+   \centering
+   \begin{subfigure}[b]{1.0\textwidth}
+     \includegraphics[width=180mm]{data_analysis/abid_anat_spat_Qi1.pdf}
+     \caption{Structural MRI fraction of artifact voxels.}
+   \end{subfigure}
+   \begin{subfigure}[b]{1.0\textwidth}
+     \includegraphics[width=180mm]{data_analysis/abid_func_RMSDMean.pdf}
+     \caption{Functional MRI mean root-mean-square deviation.}
+   \end{subfigure}
+   \caption{Examples of distributions for QAP measures calculated on ABIDE.}
 \end{figure}
 
 \begin{figure}[!ht]
@@ -227,7 +202,7 @@ Table 2 summarizes the results. Figure 4 shows boxplots of most discriminative m
      \begin{subfigure}[b]{0.4\textwidth}
        \includegraphics[width=8cm]{fig2_bysite_sig_func_corrplot}
        \caption{Functional measures}
-     \end{subfigure} 
+     \end{subfigure}
      \caption{Correlogram of measures: ABIDE in the lower triangular, CoRR in the upper triangular, X=non-significant}
 \end{figure}
 
@@ -240,22 +215,19 @@ Table 2 summarizes the results. Figure 4 shows boxplots of most discriminative m
      \begin{subfigure}[b]{0.4\textwidth}
        \includegraphics[width=8cm]{fig3_corr_func_icc_btw}
        \caption{Functional measures}
-     \end{subfigure} 
+     \end{subfigure}
      \caption{Test re-test of measures for CoRR: Boxplots of ICCs of sites by quality measures.}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering
-    \includegraphics[width=4cm]{fig4_ratings_anat_CNR}
-    \includegraphics[width=4cm]{fig4_ratings_anat_Qi1}
-    \includegraphics[width=4cm]{fig4_ratings_anat_SNR}
-    \includegraphics[width=4cm]{fig4_ratings_func_DVARS}
-    \includegraphics[width=4cm]{fig4_ratings_func_EFC}
-    \includegraphics[width=4cm]{fig4_ratings_func_FWHM}
-    \includegraphics[width=4cm]{fig4_ratings_func_Global_correlation}
-    \includegraphics[width=4cm]{fig4_ratings_func_Mean_FD} \\
-    \includegraphics[width=4cm]{fig4_ratings_func_Percent_FD}
-    \includegraphics[width=4cm]{fig4_ratings_func_Quality}
-  \caption{Most discriminative measures vs. hand assessments}
+    \includegraphics[]{data_analysis/abide_anat_qc}
+
+  \caption{Structural MRI quality measures compared to results of visual inspection.}
 \end{figure}
 
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[]{data_analysis/abide_func_qc}
+    \caption{Functional MRI quality measures compared to results of visual inspection.}
+  \end{figure}
